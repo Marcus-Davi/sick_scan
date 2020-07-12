@@ -1146,7 +1146,7 @@ namespace sick_scan
     {
       boost::system::error_code ec;
       ipNewIPAddr = boost::asio::ip::address_v4::from_string(sNewIPAddr, ec);
-      if (ec == 0)
+      if (ec.value() == 0)
       {
         sopasCmdChain.clear();
         sopasCmdChain.push_back(CMD_SET_ACCESS_MODE_3);
@@ -1166,7 +1166,7 @@ namespace sick_scan
     {
       boost::system::error_code ec;
       NTPIpAdress = boost::asio::ip::address_v4::from_string(sNTPIpAdress, ec);
-      if (ec != 0)
+      if (ec.value() != 0)
       {
         setUseNTP = false;
         ROS_ERROR("ERROR: NTP Server IP ADDRESS could not be parsed Boost Error %s:%d", ec.category().name(),

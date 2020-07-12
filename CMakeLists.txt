@@ -22,7 +22,7 @@ endmacro(use_cxx11)
 # set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=gnu++03")
 
 # Switch on, if you use c11-specific commands
-use_cxx11()
+# use_cxx11() #commented for PCL 1.10+
 
 # set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wall")
 # set (CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Wpedantic")
